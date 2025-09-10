@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Responsiva</title>
+  <style>
+    /* Estilo geral */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .box {
+      flex: 1;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .box p {
+      font-size: 1rem;
+    }
+
+    /* Layout para telas menores (celulares) */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .box h2 {
+        font-size: 1.2rem;
+      }
+
+      .box p {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* Foco principal: largura 390px */
+    @media (max-width: 390px) {
+      .box {
+        padding: 0.8rem;
+      }
+
+      .box h2 {
+        font-size: 1.1rem;
+      }
+
+      .box p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Div 1: Imagem -->
+    <div class="box">
+      <img src="https://picsum.photos/400/250?random=1" alt="Paisagem">
+    </div>
+
+    <!-- Div 2: Texto -->
+    <div class="box">
+      <h2>Explorando o Mundo</h2>
+      <p>Viajar nos permite conhecer novas culturas, provar sabores únicos e colecionar memórias que levamos para a vida toda. Cada lugar guarda uma experiência transformadora.</p>
+    </div>
+
+    <!-- Div 3: Imagem -->
+    <div class="box">
+      <img src="https://picsum.photos/400/250?random=2" alt="Cidade iluminada">
+    </div>
+  </div>
+</body>
+</html>
